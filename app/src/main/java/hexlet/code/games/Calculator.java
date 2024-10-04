@@ -20,7 +20,7 @@ public class Calculator {
 
     public static void runGame() {
             String[][] data = new String[3][2];
-        System.out.println("What is the result of the expression?");
+            System.out.println("What is the result of the expression?");
             data = generateRoundData();
             Engine.game(data);
             }
