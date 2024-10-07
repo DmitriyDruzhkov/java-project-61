@@ -2,8 +2,9 @@ package hexlet.code;
 import hexlet.code.Cli;
 import static hexlet.code.Cli.scanner;
 public class Engine {
+    public static final int countRound = 3;
     public static void game(String[][] data) {
-        for (int i = 0; i < 3; i++) {
+        for (int i = 0; i < countRound; i++) {
             System.out.println("What is the result of the expression?");
             System.out.println("Question: " + data[i][0]);
             System.out.println("Your answer: ");

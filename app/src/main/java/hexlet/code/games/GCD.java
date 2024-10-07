@@ -10,7 +10,7 @@ public class GCD {
     private static String[][] generateRoundData() { //здесь не буду спойлерить какая именно структура поможет нам хранить данные, тип укажешь сам {
         String[][] data = new String[3][2];
         System.out.println("Find the greatest common divisor of given numbers.");
-        for (int i = 0; i < 3; i++) {
+        for (int i = 0; i < Engine.countRound; i++) {
             int x = Utils.getRandomInt(0,100);
             int y = Utils.getRandomInt(0,100);
             data[i][0] = Integer.toString(x) +" "+ Integer.toString(y);

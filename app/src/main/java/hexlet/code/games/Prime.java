@@ -7,17 +7,17 @@ public class Prime {
         private static String[][] generateRoundData() {
             String[][] data = new String[3][2];
             int n;
-            for (int i = 0; i < 3; i++) {
+            for (int i = 0; i < Engine.countRound; i++) {
                 n = Utils.getRandomInt(2,20);
                 data[i][0] = Integer.toString(n);
-                data[i][1] = checkNumber(n);
+                data[i][1] = checkNumber(n)? "yes":"no";
             }
             return data;
         }
         
         
-        private static String checkNumber(int n){
-            String answer = "";
+        private static boolean checkNumber(int n){
+            boolean answer;
             int check = 0;
             for (int i = 2; i < n - 1; i++) {
                 if (n % i == 0) {
@@ -25,9 +25,9 @@ public class Prime {
                 }
             }
             if (check > 0) {
-                answer = "no";
+                answer = false;
             } else {
-                answer = "yes";
+                answer = true;
             }
             return answer;
         }

@@ -7,26 +7,24 @@ public class Progression {
 
     private static String[][] generateRoundData() {
         String[][] data = new String[3][2];
-        int[] array = new int[10];
+        String[] array = new String[10];
         int count = 0;
         int n;
         int step;
         int position;
-        for (int i = 0; i < 3; i++) {
+        for (int i = 0; i < Engine.countRound; i++) {
             data[i][0] = "";
             n = Utils.getRandomInt(0,20);
             step = Utils.getRandomInt(1,5);
             position = Utils.getRandomInt(0,10);
-            array[0] = n;
+            array[0] = Integer.toString(n);
             for (int j = 1; j < 10; j++) {
-                array[j] = array[j - 1] + step;
+                int temp = Integer.parseInt(array[j-1])+step;
+                array[j] = Integer.toString(temp);
             }
-            for (int k = 0; k < array.length; k++) {
-                if (k == position) {
-                    data[i][0] = data[i][0] + " ..";
-                    data[i][1] = Integer.toString(array[k]);
-                } else data[i][0] = data[i][0] + " " + Integer.toString(array[k]);
-            }
+            data[i][1] = array[position];
+            array[position] = "..";
+            data[i][0] = String.join(" ", array);
         }
         return data;
     }
