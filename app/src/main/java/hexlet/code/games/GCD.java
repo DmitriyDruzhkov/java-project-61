@@ -8,8 +8,8 @@ public class GCD {
     static Scanner scanner = new Scanner(System.in);
 
     private static String[][] generateRoundData() { //здесь не буду спойлерить какая именно структура поможет нам хранить данные, тип укажешь сам {
-        String[][] data = new String[3][2];
-        System.out.println("Find the greatest common divisor of given numbers.");
+        String[][] data = new String[3][3];
+        data[2][2] = "Find the greatest common divisor of given numbers.";
         for (int i = 0; i < Engine.countRound; i++) {
             int x = Utils.getRandomInt(0,100);
             int y = Utils.getRandomInt(0,100);
@@ -39,9 +39,8 @@ public class GCD {
 
     public static void runGame() {
         String[][] data = new String[3][2];
-        System.out.println("Find the greatest common divisor of given numbers.");
         data = generateRoundData();
         Engine.game(data);
-    }
+        }
     }
 

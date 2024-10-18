@@ -1,11 +1,15 @@
 package hexlet.code;
-import hexlet.code.Cli;
-import static hexlet.code.Cli.scanner;
+import java.util.Scanner;
 public class Engine {
+    public static String name;
+    static Scanner scanner = new Scanner(System.in);
     public static final int countRound = 3;
     public static void game(String[][] data) {
+        System.out.println("May I have your name?");
+        name = scanner.nextLine();
+        System.out.println("Hello, " + name + "!");
+        System.out.println(data[2][2]);
         for (int i = 0; i < countRound; i++) {
-            System.out.println("What is the result of the expression?");
             System.out.println("Question: " + data[i][0]);
             System.out.println("Your answer: ");
             String result = scanner.nextLine();
@@ -13,11 +17,11 @@ public class Engine {
                 System.out.println("Correct!");
             } else {
                 System.out.println(result + " is wrong answer ;(. Correct answer was " + data[i][1]);
-                System.out.println("Let's try again, " + Cli.name);
+                System.out.println("Let's try again, " + name);
                 break;
             }
             if (i == 2) {
-                System.out.println("Congratulations, " + Cli.name);
+                System.out.println("Congratulations, " + name);
                 break;
             }
         }

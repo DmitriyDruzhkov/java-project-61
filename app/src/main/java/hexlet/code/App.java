@@ -20,23 +20,18 @@ public class App {
                 System.out.println("Welcome to the Brain Games!");
                 break;
             case "2":
-                Cli.input();
                 Even.runGame();
                 break;
             case "3":
-                Cli.input();
                 Calculator.runGame();
                 break;
             case "4":
-                Cli.input();
                 GCD.runGame();
                 break;
             case "5":
-                Cli.input();
                 Progression.runGame();
                 break;
             case "6":
-                Cli.input();
                 Prime.runGame();
                 break;
             case "0":

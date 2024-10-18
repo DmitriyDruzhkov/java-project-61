@@ -5,11 +5,9 @@ import hexlet.code.Utils;
 
 
 public class Even {
-    public static Scanner scanner = new Scanner(System.in);
-
-
     private static String[][] generateRoundData() {
-        String[][] data = new String[3][2];
+        String[][] data = new String[3][3];
+        data[2][2] = "Answer 'yes' if the number is even, otherwise answer 'no'.";
         for (int i = 0; i < Engine.countRound; i++) {
             int rc = Utils.getRandomInt(0,100);
             data[i][0] = Integer.toString(rc);
@@ -23,7 +21,6 @@ public class Even {
     }
 
     public static void runGame() {
-        System.out.println("Answer 'yes' if the number is even, otherwise answer 'no'.");
         String[][] data = new String[3][2];
         data = generateRoundData();
         Engine.game(data);

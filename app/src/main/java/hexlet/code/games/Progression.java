@@ -1,27 +1,27 @@
 package hexlet.code.games;
-
 import hexlet.code.Engine;
 import hexlet.code.Utils;
 
 public class Progression {
 
+    private static String[] progression(int l, int step, int n ) {
+        String[] res = new String[l];
+        res[0] = Integer.toString(n);
+        for (int j = 1; j < l; j++) {
+            int temp = Integer.parseInt(res[j-1])+step;
+            res[j] = Integer.toString(temp);
+        }
+        return res;
+    }
+
     private static String[][] generateRoundData() {
-        String[][] data = new String[3][2];
-        String[] array = new String[10];
-        int count = 0;
-        int n;
-        int step;
+        String[][] data = new String[3][3];
+        data[2][2] = "What number is missing in the progression?";
         int position;
         for (int i = 0; i < Engine.countRound; i++) {
+            String[] array = progression(10, Utils.getRandomInt(1,5),Utils.getRandomInt(0,20));
             data[i][0] = "";
-            n = Utils.getRandomInt(0,20);
-            step = Utils.getRandomInt(1,5);
             position = Utils.getRandomInt(0,10);
-            array[0] = Integer.toString(n);
-            for (int j = 1; j < 10; j++) {
-                int temp = Integer.parseInt(array[j-1])+step;
-                array[j] = Integer.toString(temp);
-            }
             data[i][1] = array[position];
             array[position] = "..";
             data[i][0] = String.join(" ", array);
@@ -31,7 +31,6 @@ public class Progression {
 
     public static void runGame() {
         String[][] data = new String[3][2];
-        System.out.println("What number is missing in the progression?");
         data = generateRoundData();
         Engine.game(data);
     }

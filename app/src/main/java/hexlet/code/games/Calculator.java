@@ -7,7 +7,8 @@ public class Calculator {
 
 
     private static String[][] generateRoundData() {
-        String[][] data = new String[3][2];
+        String[][] data = new String[3][3];
+        data[2][2] = "What is the result of the expression?";
         for (int i = 0; i < Engine.countRound; i++) {
             var operation = Utils.getRandomChar();
             int x = Utils.getRandomInt(0,30);
@@ -20,7 +21,6 @@ public class Calculator {
 
     public static void runGame() {
             String[][] data = new String[3][2];
-            System.out.println("What is the result of the expression?");
             data = generateRoundData();
             Engine.game(data);
             }
