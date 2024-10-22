@@ -14,7 +14,6 @@ public class App {
         System.out.println("0 - Exit");
         String game = scanner.nextLine();
         System.out.println("Your choice: " + game);
-        System.out.println("Welcome to the Brain Games!");
         switch (game) {
             case "1":
                 System.out.println("Welcome to the Brain Games!");

@@ -8,19 +8,19 @@ public class GCD {
     static Scanner scanner = new Scanner(System.in);
 
     private static String[][] generateRoundData() { //здесь не буду спойлерить какая именно структура поможет нам хранить данные, тип укажешь сам {
-        String[][] data = new String[3][3];
+        String[][] data = new String[Engine.countRound][3];
         data[2][2] = "Find the greatest common divisor of given numbers.";
         for (int i = 0; i < Engine.countRound; i++) {
-            int x = Utils.getRandomInt(0,100);
-            int y = Utils.getRandomInt(0,100);
-            data[i][0] = Integer.toString(x) +" "+ Integer.toString(y);
-            data[i][1] = Integer.toString(nod1(x,y));
+            int x = Utils.getRandomInt(0, 100);
+            int y = Utils.getRandomInt(0, 100);
+            data[i][0] = Integer.toString(x) + " " + Integer.toString(y);
+            data[i][1] = Integer.toString(nod1(x, y));
         }
         return data;
     }
 
 
-        public static int nod1(int x, int y){
+    public static int nod1(int x, int y) {
         int min;
         int nod = 0;
         if (x > y) {
@@ -41,6 +41,5 @@ public class GCD {
         String[][] data = new String[3][2];
         data = generateRoundData();
         Engine.game(data);
-        }
     }
-
+}
