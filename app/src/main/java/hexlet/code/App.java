@@ -16,7 +16,7 @@ public class App {
         System.out.println("Your choice: " + game);
         switch (game) {
             case "1":
-                System.out.println("Welcome to the Brain Games!");
+                Cli.welcome();
                 break;
             case "2":
                 Even.runGame();

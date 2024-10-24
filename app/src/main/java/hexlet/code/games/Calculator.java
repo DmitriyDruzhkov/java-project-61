@@ -5,7 +5,6 @@ import hexlet.code.Utils;
 import java.util.Random;
 
 public class Calculator {
-    static int sum = 0;
 
 
     private static String[][] generateRoundData() {
@@ -28,6 +27,7 @@ public class Calculator {
     }
 
     public static int calculate(char operation, int x, int y) {
+        int sum = 0;
         switch (operation) {
             case '+':
                 sum = x + y;
