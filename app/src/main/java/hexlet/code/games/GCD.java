@@ -7,7 +7,7 @@ import java.util.Scanner;
 public class GCD {
     static Scanner scanner = new Scanner(System.in);
 
-    private static String[][] generateRoundData() { //здесь не буду спойлерить какая именно структура поможет нам хранить данные, тип укажешь сам {
+    private static String[][] generateRoundData() {
         String[][] data = new String[Engine.countRound][3];
         data[2][2] = "Find the greatest common divisor of given numbers.";
         for (int i = 0; i < Engine.countRound; i++) {

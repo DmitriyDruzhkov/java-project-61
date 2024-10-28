@@ -41,7 +41,7 @@ public class Calculator {
         }
         return sum;
     }
-    public static Character getRandomChar() {
+    public static char getRandomChar() {
         char[] symb = {
                 '+',
                 '-',

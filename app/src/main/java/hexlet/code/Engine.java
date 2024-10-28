@@ -13,12 +13,12 @@ public class Engine {
             System.out.println("Question: " + data[i][0]);
             System.out.println("Your answer: ");
             String result = scanner.nextLine();
-            if (result.equals(data[i][1])) {
-                System.out.println("Correct!");
-            } else {
+            if (!result.equals(data[i][1])) {
                 System.out.println(result + " is wrong answer ;(. Correct answer was " + data[i][1]);
                 System.out.println("Let's try again, " + name);
-                break;
+                return;
+            } else {
+                System.out.println("Correct!");
             }
             if (i == 2) {
                 System.out.println("Congratulations, " + name);
