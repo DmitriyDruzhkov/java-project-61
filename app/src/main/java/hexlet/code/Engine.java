@@ -4,11 +4,11 @@ public class Engine {
     public static String name;
     static Scanner scanner = new Scanner(System.in);
     public static final int countRound = 3;
-    public static void game(String[][] data) {
+    public static void game(String[][] data, String rule) {
         System.out.println("May I have your name?");
         name = scanner.nextLine();
         System.out.println("Hello, " + name + "!");
-        System.out.println(data[2][2]);
+        System.out.println(rule);
         for (int i = 0; i < countRound; i++) {
             System.out.println("Question: " + data[i][0]);
             System.out.println("Your answer: ");
@@ -21,7 +21,7 @@ public class Engine {
                 System.out.println("Correct!");
             }
             if (i == 2) {
-                System.out.println("Congratulations, " + name);
+                System.out.println("Congratulations, " + name+"!");
                 break;
             }
         }

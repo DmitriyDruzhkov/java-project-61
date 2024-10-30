@@ -9,7 +9,6 @@ public class Calculator {
 
     private static String[][] generateRoundData() {
         String[][] data = new String[Engine.countRound][3];
-        data[2][2] = "What is the result of the expression?";
         for (int i = 0; i < Engine.countRound; i++) {
             var operation = getRandomChar();
             int x = Utils.getRandomInt(0, 30);
@@ -21,9 +20,10 @@ public class Calculator {
     }
 
     public static void runGame() {
-        String[][] data = new String[3][2];
+        String[][] data = new String[2][2];
+        String rule = "What is the result of the expression?";
         data = generateRoundData();
-        Engine.game(data);
+        Engine.game(data, rule);
     }
 
     public static int calculate(char operation, int x, int y) {

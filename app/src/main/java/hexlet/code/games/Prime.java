@@ -6,7 +6,6 @@ public class Prime {
 
     private static String[][] generateRoundData() {
         String[][] data = new String[Engine.countRound][3];
-        data[2][2] = "Answer 'yes' if given number is prime. Otherwise answer 'no'.";
         int n;
         for (int i = 0; i < Engine.countRound; i++) {
             n = Utils.getRandomInt(2, 20);
@@ -34,8 +33,9 @@ public class Prime {
     }
 
     public static void runGame() {
-        String[][] data = new String[3][2];
+        String[][] data = new String[2][2];
+        String rule = "Answer 'yes' if given number is prime. Otherwise answer 'no'.";
         data = generateRoundData();
-        Engine.game(data);
+        Engine.game(data, rule);
     }
 }

@@ -16,7 +16,6 @@ public class Progression {
 
     private static String[][] generateRoundData() {
         String[][] data = new String[Engine.countRound][3];
-        data[2][2] = "What number is missing in the progression?";
         int position;
         for (int i = 0; i < Engine.countRound; i++) {
             String[] array = progression(10, Utils.getRandomInt(1, 5), Utils.getRandomInt(0, 20));
@@ -30,8 +29,9 @@ public class Progression {
     }
 
     public static void runGame() {
-        String[][] data = new String[3][2];
+        String[][] data = new String[2][2];
+        String rule = "What number is missing in the progression?";
         data = generateRoundData();
-        Engine.game(data);
+        Engine.game(data, rule);
     }
 }

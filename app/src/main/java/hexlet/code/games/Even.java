@@ -7,7 +7,6 @@ import hexlet.code.Utils;
 public class Even {
     private static String[][] generateRoundData() {
         String[][] data = new String[Engine.countRound][3];
-        data[2][2] = "Answer 'yes' if the number is even, otherwise answer 'no'.";
         for (int i = 0; i < Engine.countRound; i++) {
             int rc = Utils.getRandomInt(0, 100);
             data[i][0] = Integer.toString(rc);
@@ -21,8 +20,9 @@ public class Even {
     }
 
     public static void runGame() {
-        String[][] data = new String[3][2];
+        String[][] data = new String[2][2];
+        String rule = "Answer 'yes' if the number is even, otherwise answer 'no'.";
         data = generateRoundData();
-        Engine.game(data);
+        Engine.game(data, rule);
     }
 }

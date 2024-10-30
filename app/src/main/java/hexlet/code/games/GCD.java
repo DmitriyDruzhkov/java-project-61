@@ -9,7 +9,6 @@ public class GCD {
 
     private static String[][] generateRoundData() {
         String[][] data = new String[Engine.countRound][3];
-        data[2][2] = "Find the greatest common divisor of given numbers.";
         for (int i = 0; i < Engine.countRound; i++) {
             int x = Utils.getRandomInt(0, 100);
             int y = Utils.getRandomInt(0, 100);
@@ -38,8 +37,9 @@ public class GCD {
     }
 
     public static void runGame() {
-        String[][] data = new String[3][2];
+        String[][] data = new String[2][2];
+        String rule = "Find the greatest common divisor of given numbers.";
         data = generateRoundData();
-        Engine.game(data);
+        Engine.game(data, rule);
     }
 }
