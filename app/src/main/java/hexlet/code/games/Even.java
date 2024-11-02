@@ -1,14 +1,13 @@
 package hexlet.code.games;
-import java.util.Scanner;
 import hexlet.code.Engine;
 import hexlet.code.Utils;
 
 
 public class Even {
     private static String[][] generateRoundData() {
-        String[][] data = new String[Engine.countround][3];
+        String[][] data = new String[Engine.countround][Engine.countround];
         for (int i = 0; i < Engine.countround; i++) {
-            int rc = Utils.getRandomInt(0, 100);
+            int rc = Utils.getRandomInt(0, Utils.HUNDRED);
             data[i][0] = Integer.toString(rc);
             data[i][1] = evenOrNot(rc) ? "yes" : "no";
         }
