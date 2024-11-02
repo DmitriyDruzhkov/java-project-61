@@ -8,7 +8,7 @@ public class Calculator {
 
 
     private static String[][] generateRoundData() {
-        String[][] data = new String[Engine.countround][3];
+        String[][] data = new String[Engine.countround][Engine.countround];
         for (int i = 0; i < Engine.countround; i++) {
             var operation = getRandomChar();
             int x = Utils.getRandomInt(0, Utils.THIRTY);
