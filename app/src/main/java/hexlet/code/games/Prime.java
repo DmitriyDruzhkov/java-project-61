@@ -5,10 +5,10 @@ import hexlet.code.Utils;
 public class Prime {
 
     private static String[][] generateRoundData() {
-        String[][] data = new String[Engine.countround][3];
+        String[][] data = new String[Engine.countround][Engine.countround];
         int n;
         for (int i = 0; i < Engine.countround; i++) {
-            n = Utils.getRandomInt(2, 20);
+            n = Utils.getRandomInt(2, Utils.TWENTY);
             data[i][0] = Integer.toString(n);
             data[i][1] = checkNumber(n) ? "yes" : "no";
         }
