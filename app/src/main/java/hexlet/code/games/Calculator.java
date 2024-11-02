@@ -8,8 +8,8 @@ public class Calculator {
 
 
     private static String[][] generateRoundData() {
-        String[][] data = new String[Engine.countround][Engine.countround];
-        for (int i = 0; i < Engine.countround; i++) {
+        String[][] data = new String[Engine.COUNT_ROUND][Engine.COUNT_ROUND];
+        for (int i = 0; i < Engine.COUNT_ROUND; i++) {
             var operation = getRandomChar();
             int x = Utils.getRandomInt(0, Utils.THIRTY);
             int y = Utils.getRandomInt(0, Utils.THIRTY);
