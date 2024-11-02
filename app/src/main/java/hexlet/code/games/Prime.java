@@ -5,9 +5,9 @@ import hexlet.code.Utils;
 public class Prime {
 
     private static String[][] generateRoundData() {
-        String[][] data = new String[Engine.countRound][3];
+        String[][] data = new String[Engine.countround][3];
         int n;
-        for (int i = 0; i < Engine.countRound; i++) {
+        for (int i = 0; i < Engine.countround; i++) {
             n = Utils.getRandomInt(2, 20);
             data[i][0] = Integer.toString(n);
             data[i][1] = checkNumber(n) ? "yes" : "no";
