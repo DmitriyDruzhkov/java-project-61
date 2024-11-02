@@ -31,7 +31,7 @@ public class GCD {
             if (x % i == 0 && y % i == 0) {
                 nod = i;
                 break;
-            } else nod = 1;
+            } else { nod = 1; }
         }
         return nod;
     }
