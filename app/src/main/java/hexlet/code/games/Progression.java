@@ -15,12 +15,12 @@ public class Progression {
     }
 
     private static String[][] generateRoundData() {
-        String[][] data = new String[Engine.countround][3];
+        String[][] data = new String[Engine.countround][Engine.countround];
         int position;
         for (int i = 0; i < Engine.countround; i++) {
-            String[] array = progression(10, Utils.getRandomInt(1, 5), Utils.getRandomInt(0, 20));
+            String[] array = progression(Utils.TEN, Utils.getRandomInt(1, Utils.FIVE), Utils.getRandomInt(0, Utils.TWENTY));
             data[i][0] = "";
-            position = Utils.getRandomInt(0, 10);
+            position = Utils.getRandomInt(0, Utils.TEN);
             data[i][1] = array[position];
             array[position] = "..";
             data[i][0] = String.join(" ", array);
