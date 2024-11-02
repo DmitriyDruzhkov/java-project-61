@@ -5,6 +5,7 @@ public class Utils {
     public static final int FIVE = 5;
     public static final int TEN = 10;
     public static final int TWENTY = 20;
+    public static final int THIRTY = 30;
     public static int getRandomInt(int min, int max) {
         Random rand = new Random();
         return rand.nextInt(min, max);
