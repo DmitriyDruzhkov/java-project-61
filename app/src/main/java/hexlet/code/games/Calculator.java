@@ -38,6 +38,8 @@ public class Calculator {
             case '*':
                 sum = x * y;
                 break;
+            default:
+                break;
         }
         return sum;
     }
