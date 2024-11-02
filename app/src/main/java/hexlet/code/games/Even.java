@@ -6,8 +6,8 @@ import hexlet.code.Utils;
 
 public class Even {
     private static String[][] generateRoundData() {
-        String[][] data = new String[Engine.countRound][3];
-        for (int i = 0; i < Engine.countRound; i++) {
+        String[][] data = new String[Engine.countround][3];
+        for (int i = 0; i < Engine.countround; i++) {
             int rc = Utils.getRandomInt(0, 100);
             data[i][0] = Integer.toString(rc);
             data[i][1] = evenOrNot(rc) ? "yes" : "no";
