@@ -13,7 +13,7 @@ public class Calculator {
             var operation = getRandomChar();
             int x = Utils.getRandomInt(0, 30);
             int y = Utils.getRandomInt(0, 30);
-            data[i][0] = Integer.toString(x) + Character.toString(operation) + Integer.toString(y);
+            data[i][0] = Integer.toString(x) +" "+ Character.toString(operation) +" "+ Integer.toString(y);
             data[i][1] = Integer.toString(calculate(operation, x, y));
         }
         return data;
