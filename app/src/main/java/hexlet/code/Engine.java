@@ -15,7 +15,7 @@ public class Engine {
             String result = scanner.nextLine();
             if (!result.equals(data[i][1])) {
                 System.out.println(result + " is wrong answer ;(. Correct answer was " + data[i][1]);
-                System.out.println("Let's try again, " + name);
+                System.out.println("Let's try again, " + name+"!");
                 return;
             } else {
                 System.out.println("Correct!");
