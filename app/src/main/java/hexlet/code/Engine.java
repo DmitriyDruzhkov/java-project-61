@@ -10,8 +10,8 @@ public class Engine {
         System.out.println("Hello, " + name + "!");
         System.out.println(rule);
         for (int i = 0; i < countRound; i++) {
-            System.out.println("Question: " + data[i][0]);
-            System.out.println("Your answer: ");
+            System.out.print("Question: " + data[i][0]);
+            System.out.print("Your answer: ");
             String result = scanner.nextLine();
             if (!result.equals(data[i][1])) {
                 System.out.println(result + " is wrong answer ;(. Correct answer was " + data[i][1]);
