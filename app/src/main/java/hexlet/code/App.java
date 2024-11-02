@@ -43,6 +43,8 @@ public class App {
             case "0":
                 System.exit(0);
                 break;
+            default:
+                break;
         }
     }
 }
