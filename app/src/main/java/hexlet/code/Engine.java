@@ -10,7 +10,7 @@ public class Engine {
         System.out.println("Hello, " + name + "!");
         System.out.println(rule);
         for (int i = 0; i < countRound; i++) {
-            System.out.print("Question: " + data[i][0]);
+            System.out.println("Question: " + data[i][0]);
             System.out.print("Your answer: ");
             String result = scanner.nextLine();
             if (!result.equals(data[i][1])) {
