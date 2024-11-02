@@ -2,7 +2,7 @@ package hexlet.code;
 import java.util.Scanner;
 public class Engine {
     private static String name;
-    private static Scanner scanner = new Scanner(System.in);
+    static Scanner scanner = new Scanner(System.in);
     public static final int countRound = 3;
     public static void game(String[][] data, String rule) {
         System.out.println("May I have your name?");
