@@ -11,9 +11,9 @@ public class Calculator {
         String[][] data = new String[Engine.countround][3];
         for (int i = 0; i < Engine.countround; i++) {
             var operation = getRandomChar();
-            int x = Utils.getRandomInt(0, 30);
-            int y = Utils.getRandomInt(0, 30);
-            data[i][0] = Integer.toString(x) +" "+ Character.toString(operation) +" "+ Integer.toString(y);
+            int x = Utils.getRandomInt(0, Utils.THIRTY);
+            int y = Utils.getRandomInt(0, Utils.THIRTY);
+            data[i][0] = Integer.toString(x) + " " + Character.toString(operation) + " " + Integer.toString(y);
             data[i][1] = Integer.toString(calculate(operation, x, y));
         }
         return data;
