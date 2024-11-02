@@ -8,8 +8,8 @@ public class GCD {
     static Scanner scanner = new Scanner(System.in);
 
     private static String[][] generateRoundData() {
-        String[][] data = new String[Engine.countRound][3];
-        for (int i = 0; i < Engine.countRound; i++) {
+        String[][] data = new String[Engine.countround][3];
+        for (int i = 0; i < Engine.countround; i++) {
             int x = Utils.getRandomInt(0, 100);
             int y = Utils.getRandomInt(0, 100);
             data[i][0] = Integer.toString(x) + " " + Integer.toString(y);
