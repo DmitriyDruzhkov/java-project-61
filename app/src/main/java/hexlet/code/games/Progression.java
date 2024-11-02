@@ -15,9 +15,9 @@ public class Progression {
     }
 
     private static String[][] generateRoundData() {
-        String[][] data = new String[Engine.countRound][3];
+        String[][] data = new String[Engine.countround][3];
         int position;
-        for (int i = 0; i < Engine.countRound; i++) {
+        for (int i = 0; i < Engine.countround; i++) {
             String[] array = progression(10, Utils.getRandomInt(1, 5), Utils.getRandomInt(0, 20));
             data[i][0] = "";
             position = Utils.getRandomInt(0, 10);
